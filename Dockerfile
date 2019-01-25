@@ -2,6 +2,8 @@ FROM mhart/alpine-node:11
 
 ENV PACKAGES="\
     make \
+    gcc \
+    libc-dev \
     bash \
     ca-certificates \
     python2 \
