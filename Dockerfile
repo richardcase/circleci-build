@@ -1,6 +1,8 @@
 FROM mhart/alpine-node:11
 
 ENV PACKAGES="\
+    build-dependencies \
+    build-base \
     make \
     gcc \
     libc-dev \
