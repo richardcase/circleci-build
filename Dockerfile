@@ -1,6 +1,7 @@
 FROM mhart/alpine-node:11
 
 ENV PACKAGES="\
+    make \
     bash \
     ca-certificates \
     python2 \
