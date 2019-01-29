@@ -2,6 +2,7 @@ FROM mhart/alpine-node:11
 
 ENV PACKAGES="\
     build-base \
+    curl \
     bash \
     ca-certificates \
     python2 \
@@ -16,4 +17,5 @@ RUN apk update && apk add --no-cache $PACKAGES \
     && pip install --upgrade pip \
     && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip2.7 /usr/bin/pip; fi \
     && pip install awscli \
+    && curl https://sdk.cloud.google.com | bash \
     && echo
