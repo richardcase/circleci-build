@@ -18,5 +18,6 @@ RUN apk update && apk add --no-cache $PACKAGES \
     && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip2.7 /usr/bin/pip; fi \
     && pip install awscli \
     && curl https://sdk.cloud.google.com | bash \
-    && source /root/google-cloud-sdk/path.bash.inc \
     && echo
+
+ENV PATH /root/google-cloud-sdk/bin:$PATH
