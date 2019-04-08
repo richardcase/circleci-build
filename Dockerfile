@@ -8,6 +8,8 @@ ENV PACKAGES="\
     python2 \
     py-setuptools \
     jq \
+    git \
+    openssh-client
 "
 
 RUN apk update && apk add --no-cache $PACKAGES \
